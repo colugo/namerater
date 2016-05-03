@@ -1,0 +1,5 @@
+ -up to 5 categories as urns
+ -list of categories is a category 
+ -fun ones as buttons (trucker names, callsigns)
+ -better output structure. Individual results, concatenation, spaces and hyphens 
+ -
