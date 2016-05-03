@@ -5125,3 +5125,328 @@ Processing by NameratorsController#randomCount as */*
   [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
   [1m[36mTitle Load (0.1ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 141[0m
 Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+  [1m[36m (14.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (10.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateActions (20160503010055)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "actions" ("id" serial primary key, "name" text) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160503010055"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTitles (20160503012127)
+  [1m[35m (5.7ms)[0m  BEGIN
+  [1m[36m (11.6ms)[0m  [1mCREATE TABLE "titles" ("id" serial primary key, "name" text) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160503012127"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddTitlesAndActions (20160503014127)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1minsert into actions (name) values ("listening");[0m
+PG::UndefinedColumn: ERROR:  column "listening" does not exist
+LINE 1: insert into actions (name) values ("listening");
+                                           ^
+: insert into actions (name) values ("listening");
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTitlesAndActions (20160503014127)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1minsert into actions (name) values ('listening');[0m
+  [1m[35m (0.2ms)[0m  insert into actions (name) values ('running');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('walking');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('jogging');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('doing');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('going');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('turning');[0m
+  [1m[35m (0.2ms)[0m  insert into actions (name) values ('twisting');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('shouting');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('jumping');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('laughing');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('crying');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('screaming');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('playful');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('swimming');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('drawing');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('painting');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('building');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('creating');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('reading');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('writing');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('singing');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('joking');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('lying');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('fibbing');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('doodling');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('entering');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('exiting');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('sleeping');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('eating');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('drinking');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('dancing');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('sneezing');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('coughing');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('skipping');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('riding');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('deciding');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('planning');
+  [1m[36m (0.1ms)[0m  [1minsert into actions (name) values ('buying');[0m
+  [1m[35m (0.1ms)[0m  insert into actions (name) values ('shopping');
+  [1m[36m (0.4ms)[0m  [1minsert into titles (name) values ('peacock');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('flamingo');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('rodent');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('hamster');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('squirrel');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('groundhog');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('beaver');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('boar');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('antelope');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('bison');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('ox');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('moose');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('rhinoceros');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('hippopotamus');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('elephant');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('giraffe');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('mammal');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('raccoon');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('hyena');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('lynx');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('wolf');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('cougar');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('cheetah');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('leopard');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('dolphin');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('whale');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('seal');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('gorilla');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('primate');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('baboon');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('macaque');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('orangutan');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('chimpanzee');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('lemur');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('squid');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('scallop');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('clam');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('skate');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('anchovy');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('swordfish');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('bass');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('tuna');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('salmon');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('trout');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('cockroach');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('caterpillar');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('worm');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('earthworm');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('butterfly');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('dragonfly');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('iguana');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('lizard');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('flea');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('tick');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('bat');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('swan');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('camel');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('kangaroo');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('toad');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('frog');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('beetle');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('deer');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('otter');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('snake');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('mosquito');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('fly');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('pig');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('cow');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('turkey');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('bug');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('dog');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('oyster');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('rabbit');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('hare');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('monkey');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('donkey');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('horse');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('mule');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('zebra');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('buffalo');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('reindeer');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('goat');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('sheep');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('llama');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('bear');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('pony');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('parrot');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('weasel');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('dove');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('eagle');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('vulture');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('owl');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('ostrich');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('hummingbird');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('ant');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('lion');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('puma');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('panther');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('jaguar');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('tiger');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('bull');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('shrimp');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('lobster');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('bee');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('louse');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('hornet');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('grasshopper');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('cricket');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('mantid');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('spider');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('tarantula');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('scorpion');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('shark');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('octopus');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('turtle');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('viper');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('chameleon');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('rattlesnake');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('cobra');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('python');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('boa');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('alligator');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('crocodile');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('caiman');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('bird');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('swallow');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('sparrow');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('condor');
+  [1m[36m (0.2ms)[0m  [1minsert into titles (name) values ('macaw');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('woodpecker');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('pelican');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('penguin');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('heron');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('stork');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('pheasant');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('falcon');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('quail');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('hen');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('goose');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('pigeon');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('duck');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('salamander');
+  [1m[36m (0.7ms)[0m  [1minsert into titles (name) values ('snail');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('mussel');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('slug');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('crab');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('jellyfish');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('termite');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('ladybug');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('firefly');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('wasp');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('crow');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('seagull');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('hawk');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('canary');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('parakeet');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('rooster');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('chick');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('chicken');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('roadrunner');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('seahorse');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('eel');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('stingray');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('flounder');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('tadpole');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('tortoise');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('koala');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('armadillo');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('anteater');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('rat');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('gopher');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('mouse');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('porcupine');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('foal');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('lamb');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('fawn');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('hog');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('calf');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('kitten');[0m
+  [1m[35m (0.1ms)[0m  insert into titles (name) values ('fox');
+  [1m[36m (0.1ms)[0m  [1minsert into titles (name) values ('walrus');[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160503014127"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'actions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'titles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for ::1 at 2016-05-03 14:29:36 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#show as HTML
+  Rendered pages/home.html.erb (1.5ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names/10" for ::1 at 2016-05-03 14:29:37 +1000
+Processing by NameratorsController#randomCount as */*
+  Parameters: {"count"=>"10"}
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.4ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 34[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 57[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.3ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 58[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.2ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 35[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 33[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.2ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 26[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 42[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.3ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 33[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 109[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.2ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 55[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.2ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 23[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 154[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.2ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 19[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 47[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.2ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 27[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 142[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "actions"
+  [1m[36mAction Load (0.2ms)[0m  [1mSELECT  "actions".* FROM "actions"  ORDER BY "actions"."id" ASC LIMIT 1 OFFSET 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "titles"
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT  "titles".* FROM "titles"  ORDER BY "titles"."id" ASC LIMIT 1 OFFSET 166[0m
+Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 9.8ms)
