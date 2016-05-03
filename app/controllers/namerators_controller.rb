@@ -4,7 +4,6 @@ class NameratorsController < ApplicationController
   # GET /namerators.json
   def random(count = 5)
 
-    logger.info "Processing the request..."
 
     attemptedCount = Integer(count) rescue MAX_RESULTS + 1
 
