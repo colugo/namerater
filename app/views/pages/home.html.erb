@@ -56,8 +56,43 @@
       <div class="jumbotron">
         <h1>Namerator</h1>
         <p class="lead">Generate some names!</p>
-        <p><a class="btn btn-lg btn-success" href="#" id="go-button" role="button">go!</a></p>
+        <p><a class="btn btn-lg btn-success" href="#" id="go-button" role="button">go!</a>
+           <a class="btn btn-lg btn-primary" data-toggle="collapse" href="#collapseAPI" aria-expanded="false" aria-controls="collapseAPI">Show api</a></p>
       </div>
+
+    <div class="collapse" id="collapseAPI">
+      <div class="card">
+
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">GET /names</h3>
+          </div>
+          <div class="panel-body">
+            <h4 style="color:#5bc0de;">Responses</h4>
+            <table class="table table-condensed">
+              <tr class="active"><th>Code</th><th>Description</th></tr>
+              <tr><td style="color:#13c20f;">200</td><td>OK</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">GET /names/{quantity}</h3>
+          </div>
+          <div class="panel-body">
+            <h4 style="color:#5bc0de;">Responses</h4>
+            <table class="table table-condensed">
+              <tr class="active"><th>Code</th><th>Description</th></tr>
+              <tr><td style="color:#13c20f;">200</td><td>OK</td></tr>
+              <tr><td style="color:#f39822;">422</td><td>Unprocessable Entity if {quantity} is Nan or {quantity}&gt;50</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 
       <ul class="list-group" id="name-list">
 
