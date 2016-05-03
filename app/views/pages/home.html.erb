@@ -33,7 +33,7 @@
 
         $("#go-button").click(function(){
 
-            $.get("http://localhost:3000/names/10", function(data){
+            $.get("names/10", function(data){
               $("#name-list").empty();
                 $.each(data,function(key,value){
                   $("#name-list").append(
