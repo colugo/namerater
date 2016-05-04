@@ -33,11 +33,11 @@
 
         $("#go-button").click(function(){
 
-            $.get("names/10", function(data){
+            $.get("names/Action/Animal/10", function(data){
               $("#name-list").empty();
                 $.each(data,function(key,value){
                   $("#name-list").append(
-                      $("<li class=\"list-group-item\">").html(value.name)
+                      $("<li class=\"list-group-item\">").html(value.hyphens)
                     );
                 });
             });
