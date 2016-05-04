@@ -1,5 +1,5 @@
 class Number
   def self.getRandomValue
-    '%05d' % rand(99999)
+    '%02d' % rand(99)
   end
 end
