@@ -4,7 +4,7 @@ class Result
   def initialize(categories)
       @parts = Hash.new
       categories.each_with_index do |category, index|
-        part = Kernel.const_get(category).random(1).name
+        part = Kernel.const_get(category).getRandomValue
         @parts[index] = part
       end
       @hyphens = @parts.values.join("-")

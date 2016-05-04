@@ -20,7 +20,7 @@ class NameratorsController < ApplicationController
     if(@config.size > 5 )
       render json: "Maximum of 5 categories allowed", status: :unprocessable_entity and return
     end
-    #@config.each{ |category| verifyCategory(category) or return }
+    @config.each{ |category| verifyCategory(category) or return }
     return true
   end
 

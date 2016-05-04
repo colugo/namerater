@@ -8,5 +8,9 @@ module Randomable
       records = offset(rand(count - the_count + 1)).limit(the_count)
       the_count == 1 ? records.first : records
     end
+
+    def getRandomValue
+      random().name
+    end
   end
 end
