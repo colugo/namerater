@@ -56,6 +56,18 @@
             });
         });
 
+        $("#callsign-button").click(function(){
+            $.get("/Phonetic/Phonetic/Phonetic/10", function(data){
+              $("#name-list").empty();
+              $("#name-list").append($("<li class=\"list-group-item active\">").html(window.location.origin  + "/Phonetic/Phonetic/Phonetic/10"));
+                $.each(data,function(key,value){
+                  $("#name-list").append(
+                      $("<li class=\"list-group-item\">").html(value.spaces)
+                    );
+                });
+            });
+        });
+
         $("#categories-button").click(function(){
             $.get("/Category/Category/Category/10", function(data){
               $("#name-list").empty();
@@ -84,6 +96,7 @@
         <p>
           <a class="btn btn-success" href="#" id="animals-button" role="button">Animals</a>
           <a class="btn btn-success" href="#" id="truckers-button" role="button">Truckers</a>
+          <a class="btn btn-success" href="#" id="callsign-button" role="button">Callsigns</a>
           <a class="btn btn-success" href="#" id="categories-button" role="button">Categories</a>
         </p>
         <p><a class="btn btn-primary" data-toggle="collapse" href="#collapseAPI" aria-expanded="false" aria-controls="collapseAPI">Show api</a></p>
