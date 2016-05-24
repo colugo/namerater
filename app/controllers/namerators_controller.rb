@@ -26,7 +26,7 @@ class NameratorsController < ApplicationController
 
   def verifyCategory(category)
     return true if(category == "Category")
-    if Category.find_by(name: category) == nil
+    if !Category.is_valid?(category)
       render json: "No category: #{category}", status: :unprocessable_entity and return
     end
     return true
