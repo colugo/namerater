@@ -1,5 +1,5 @@
 class Result
-  attr_accessor :hyphens, :spaces, :commas, :parts
+  attr_accessor :hyphens, :spaces, :commas, :path, :parts
 
   def initialize(categories)
       @parts = Hash.new
@@ -10,6 +10,7 @@ class Result
       @hyphens = @parts.values.join("-")
       @spaces = @parts.values.join(" ")
       @commas = @parts.values.join(",")
+      @path = @parts.values.join("/")
   end
 
 end
