@@ -51,11 +51,4 @@ class NameratorsController < ApplicationController
     true
   end
 
-
-  # validation?
-  #if count > MAX_RESULTS
-  #  render json: count, status: :unprocessable_entity
-  #  return
-  #end
-
 end
